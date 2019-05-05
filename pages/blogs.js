@@ -33,7 +33,7 @@ Blog.getInitialProps = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/posts');
     const data = await response.json();
 
-    console.log(data);
+    // console.log(data);
 
     //this console log will execute in the server console first and then after re-routing to the page in the client it will log in the client
 

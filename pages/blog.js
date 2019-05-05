@@ -10,9 +10,20 @@ const Blog = (props) => (
         </Head>
 
         <div>
-            {props.router.query.id}
+            <h2>{props.blog.title}</h2>
+            <p>{props.blog.body}</p>
         </div>
     </Layout>
 );
+
+Blog.getInitialProps = async (context) => {
+    //context will give you access to the route params, query and res obj in server
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${context.query.id}`);
+    const data = await response.json();
+
+    return {
+        blog: data
+    }
+};
 
 export default withRouter(Blog);
