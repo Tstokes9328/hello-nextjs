@@ -23,7 +23,7 @@ const Blog = (props) => {
 
             {
                 props.data.map((blog, index) => (
-                    <Link key={index} href={`/blog/?id=${blog.id}`}>
+                    <Link as={`/blog/${blog.id}`} key={index} href={`/blog?id=${blog.id}`}>
                         <h4>{blog.title}</h4>
                     </Link>
                 ))
