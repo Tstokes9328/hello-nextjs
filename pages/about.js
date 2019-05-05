@@ -1,23 +1,17 @@
-import Link from 'next/link';
 import Layout from '../components/Layout';
-
+import Head from 'next/head';
 
 const About = () => (
-    <Layout 
-        mainTitle="My About Page Built With NextJS" 
+    <Layout
+        mainTitle="My About Page Built With NextJS"
         footer={`Copyright ${new Date().getFullYear()}`}
     >
-        <h2>About</h2>
-        <p>
-            This is a really cool p tag
-        </p>
+        <Head>
+            <title>About</title>
+        </Head>
 
-        <style jsx>{`
-            p {
-                color: indigo;
-                font-size: 20px;
-            }
-        `}</style>
+        <h2>About</h2>
+
     </Layout>
 );
 
