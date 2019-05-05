@@ -1,17 +1,13 @@
 import Link from 'next/link';
-import Nav from '../components/Nav';
+import Layout from '../components/Layout';
 
-
-const myStyle = {color: 'red', borderLeft: '5px solid black', padding: '5px'};
 
 const About = () => (
-    <div>
-        <Nav />
+    <Layout 
+        mainTitle="My About Page Built With NextJS" 
+        footer={`Copyright ${new Date().getFullYear()}`}
+    >
         <h2>About</h2>
-        <Link href="/">
-            <a style={myStyle}>Home</a>
-        </Link>
-
         <p>
             This is a really cool p tag
         </p>
@@ -22,7 +18,7 @@ const About = () => (
                 font-size: 20px;
             }
         `}</style>
-    </div>
+    </Layout>
 );
 
 export default About;
